@@ -1,0 +1,82 @@
+<ion-view view-title="Dashboard">
+    <ion-content class="padding">
+        <div class="list card">
+            <div class="item item-divider">payment:</div>
+            <div class="item item-body" ng-controller="CltCtrl">
+                <div class="form-horizontal">
+                    <form ng-submit="calculate()">
+                        <div class="form-group">
+                            <label for="buy_unit_price" class="col-sm-3 control-label">Buy Unit Price</label>
+                            <div class="col-sm-9">
+                                <input type="number" class="form-control" id="buy_unit_price" ng-model="buy_unit_price" name="buy_unit_price">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="buy_units" class="col-sm-3 control-label">Buy Units</label>
+                            <div class="col-sm-9">
+                                <input type="number" class="form-control" id="buy_units" ng-model="buy_units" name="buy_units">
+                                <span style="color:red">
+                                    {{totalBuyPrice()}}
+                                </span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="sell_unit_price" class="col-sm-3 control-label">Sell Unit Price</label>
+                            <div class="col-sm-9">
+                                <input type="number" class="form-control" id="sell_unit_price" ng-model="sell_unit_price" name="sell_unit_price">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="sell_units" class="col-sm-3 control-label">Sell Units</label>
+                            <div class="col-sm-9">
+                                <input type="number" class="form-control" id="sell_units" ng-model="sell_units" name="sell_units">
+                                <span style="color:red">
+                                    {{totalSellPrice()}}
+                                </span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="brokerage" class="col-sm-3 control-label">brokerage (%)</label>
+                            <div class="col-sm-9">
+                                <input type="number" class="form-control" id="brokerage" ng-model="brokerage" name="brokerage">
+                                <span style="color:red;">
+                                    {{totalBrokerage()}}
+                                </span>
+                            </div>
+                        </div>
+<!--                        <div class="form-group">
+                            <div class="">
+                                <input class="btn-primary" type="submit" value="Calculate">
+                            </div>
+                        </div>-->
+                    </form>
+                </div>
+            </div>
+        </div>
+
+<!--        <div class="list card">
+            <div class="item item-divider">Recent Updates</div>
+            <div class="item item-body">
+                <div>
+                    There is a fire in <b>sector 3</b>
+                </div>
+            </div>
+        </div>
+        <div class="list card">
+            <div class="item item-divider">Health</div>
+            <div class="item item-body">
+                <div>
+                    You ate an apple today!
+                </div>
+            </div>
+        </div>
+        <div class="list card">
+            <div class="item item-divider">Upcoming</div>
+            <div class="item item-body">
+                <div>
+                    You have <b>29</b> meetings on your calendar tomorrow.
+                </div>
+            </div>
+        </div>-->
+    </ion-content>
+</ion-view>
